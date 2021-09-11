@@ -1,3 +1,17 @@
+name: conda
+
+defaults:
+  run:
+    shell: bash
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+  schedule:
+    - cron: '0 13 * * 4'
+
 jobs:
   conda:
     runs-on: "ubuntu-latest"
